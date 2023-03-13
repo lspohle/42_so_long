@@ -6,7 +6,7 @@
 /*   By: lspohle <lspohle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 11:23:02 by lspohle           #+#    #+#             */
-/*   Updated: 2023/03/10 21:03:12 by lspohle          ###   ########.fr       */
+/*   Updated: 2023/03/13 18:53:00 by lspohle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@
 
 # define EMPTY "../images/empty.xpm"
 # define WALL "../images/wall.xpm"
-# define COLLECTIBLE1 "../images/heart.xpm"
+# define COLLECTIBLE1 "../images/heart1.xpm"
 # define MAN "../images/man.xpm"
 # define WOMAN "../images/woman.xpm"
 
