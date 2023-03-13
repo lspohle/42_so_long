@@ -80,10 +80,6 @@ Note that I included [MiniLibX](https://github.com/42Paris/minilibx-linux) as a 
      - HTTPS
       
       cd ~ && git clone https://github.com/lspohle/42_so_long.git && cd 42_so_long/srcs && bash script.sh
-
-- Compile by using the following command.
-      
-      cd ~/42_so_long/srcs && make -s
       
 <a name="6"></a>
 # [Implementation](#6)
