@@ -1,4 +1,4 @@
-# So Long - Find your better half!
+# A project from the second ring of the core - so_long
 
 *So Long is a 2D game in the course of the core curriculum at 42 Wolfsburg.
 You need to collect hearts while finding your love.
