@@ -6,7 +6,7 @@
 /*   By: lspohle <lspohle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 11:22:30 by lspohle           #+#    #+#             */
-/*   Updated: 2023/03/13 13:21:13 by lspohle          ###   ########.fr       */
+/*   Updated: 2023/03/14 09:43:40 by lspohle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int	create_map(t_data *game, char *map, char *player, char *exit)
 	game->mlx = mlx_init();
 	game->window = mlx_new_window(game->mlx,
 			game->map_wth * IMG_SIZE, game->map_hgt * IMG_SIZE, GAME);
-	if (select_characters(game, player, exit) == 0)
+	if (create_characters(game, player, exit) == 0)
 		return (error(EINVAL, AOFNV));
 	create_images(game);
 	put_map_to_window(game);

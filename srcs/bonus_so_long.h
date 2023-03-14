@@ -6,7 +6,7 @@
 /*   By: lspohle <lspohle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 11:23:02 by lspohle           #+#    #+#             */
-/*   Updated: 2023/03/13 17:09:34 by lspohle          ###   ########.fr       */
+/*   Updated: 2023/03/14 09:41:38 by lspohle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,9 @@
 # define REWARDMM "../images/coupleMM.xpm"
 # define REWARDWM "../images/coupleWM.xpm"
 # define REWARDWW "../images/coupleWW.xpm"
+# define TMPMM "../images/tmpMM.xpm"
+# define TMPWM "../images/tmpWM.xpm"
+# define TMPWW "../images/tmpWW.xpm"
 
 # define MTOPE "The map contains more or less than one player/exit!\n"
 # define MDNOC "The map does not contain at least one collectible!\n"
@@ -68,6 +71,7 @@ typedef struct s_data
 	void	*img_rival[2];
 	void	*img_clt[2];
 	void	*img_reward;
+	void	*img_tmp;
 	int		img_wth;
 	int		img_hgt;
 
@@ -88,7 +92,7 @@ typedef struct s_data
 }				t_data;
 
 int		create_map(t_data *game, char *map, char *player, char *exit);
-int		select_characters(t_data *game, char *requested_player, char *requested_exit);
+int		create_characters(t_data *game, char *requested_player, char *requested_exit);
 void	display_moves(t_data *game);
 int		read_map(t_data *game, char *map);
 t_bool	check_map(t_data *game);

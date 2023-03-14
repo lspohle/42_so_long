@@ -6,7 +6,7 @@
 /*   By: lspohle <lspohle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 11:22:39 by lspohle           #+#    #+#             */
-/*   Updated: 2023/03/13 17:09:59 by lspohle          ###   ########.fr       */
+/*   Updated: 2023/03/14 08:58:55 by lspohle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ t_bool	error(int errnum, char *descr)
 	available_characters = "   - W (woman)\n   - M (man)\n   - O (others)\n";
 	select_map = "\nPlease select the map you would like to play on.";
 	available_maps = "   - ../maps/map1.ber\n   - ../maps/map2.ber\n   - ../maps/bonus_map1.ber\n   - ../maps/bonus_map2.ber\n   - ../maps/bonus_map3.ber\n   - ../maps/bonus_map4.ber\n   - ../maps/bonus_map5.ber\n";
-	rules_map = "   - It must be rectangular.\n   - It must be surrounded by walls.\n   - It must contain exactly one exit.\n   - It must contain exactly one starting position.\n   - It must contain at least one collectible.\n";
+	rules_map = "   - It must be rectangular.\n   - It must be surrounded by walls.\n   - It must contain exactly one exit.\n   - It must contain exactly one starting position.\n   - It must contain a valid path.\n   - It must contain at least one collectible.\n";
 	ft_printf(RED"Error: "ESC"%s\n", strerror(errnum));
 	ft_printf(RED"%s", descr);
 	ft_printf(GREEN"%s"ESC"\nThose are the available characters:\n", select_characters);
@@ -33,7 +33,7 @@ t_bool	error(int errnum, char *descr)
 	ft_printf(GREEN"%s"ESC"\nThose are the available maps:\n", select_map);
 	ft_printf(YELLOW"%s"ESC, available_maps),
 	ft_printf("The map has to be valid:\n"YELLOW"%s"ESC, rules_map);
-	ft_printf("\nAn example is: "GREEN"./so_long ../maps/bonus_map2.ber M W\n\n"ESC);
+	ft_printf("\nAn example is: "GREEN"alv ../maps/bonus_map2.ber M W\n\n"ESC);
 	return (false);
 }
 

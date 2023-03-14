@@ -6,7 +6,7 @@
 /*   By: lspohle <lspohle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 11:22:49 by lspohle           #+#    #+#             */
-/*   Updated: 2023/03/13 14:27:45 by lspohle          ###   ########.fr       */
+/*   Updated: 2023/03/14 10:07:35 by lspohle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,20 +36,24 @@ static int	check_move(t_data *game, int player, int row, int clm)
 	dst = game->map[row][clm];
 	if (dst == '1')
 		return (0);
+	else if (dst == 'R')
+		game_over(game);
 	if (player == 1)
+	{
 		mlx_put_image_to_window(game->mlx, game->window, game->img_empty,
 			game->player[1] * IMG_SIZE, game->player[0] * IMG_SIZE);
-	else if (player == 2)
+	}
+	if (player == 2)
+	{
 		mlx_put_image_to_window(game->mlx, game->window, game->img_empty,
 			game->snd_player[1] * IMG_SIZE, game->snd_player[0] * IMG_SIZE);
+	}
 	ft_printf(CYAN"Counter: %i\n"ESC, ++game->amt_moves);
 	if (dst == 'C' && ++game->cnt_clt <= game->amt_clt)
 	{
 		ft_printf(GREEN"\nCollected: %i 🥳\n\n"ESC, game->cnt_clt);
 		game->map[row][clm] = '0';
 	}
-	else if (dst == 'R')
-		game_over(game);
 	display_moves(game);
 	return (1);
 }
@@ -68,8 +72,6 @@ static void keycodes_first_player(int keycode, t_data *game)
 	else if (keycode == 126
 		&& check_move(game, 1, game->player[0] - 1, game->player[1]) == 1)
 		game->player[0]--;
-	mlx_put_image_to_window(game->mlx, game->window, game->img_player,
-			game->player[1] * IMG_SIZE, game->player[0] * IMG_SIZE);
 }
 
 static void keycodes_second_player(int keycode, t_data *game)
@@ -86,8 +88,6 @@ static void keycodes_second_player(int keycode, t_data *game)
 	else if (keycode == 13
 		&& check_move(game, 2, game->snd_player[0] - 1, game->snd_player[1]) == 1)
 		game->snd_player[0]--;
-	mlx_put_image_to_window(game->mlx, game->window, game->img_exit,
-			game->snd_player[1] * IMG_SIZE, game->snd_player[0] * IMG_SIZE);
 }
 
 // Creates hooks so that the user can control the player
@@ -97,10 +97,19 @@ int	play_game(int keycode, t_data *game)
 	{
 		keycodes_first_player(keycode, game);
 		keycodes_second_player(keycode, game);
+		mlx_put_image_to_window(game->mlx, game->window, game->img_player,
+			game->player[1] * IMG_SIZE, game->player[0] * IMG_SIZE);
+		mlx_put_image_to_window(game->mlx, game->window, game->img_exit,
+			game->snd_player[1] * IMG_SIZE, game->snd_player[0] * IMG_SIZE);
 		if (game->player[0] == game->snd_player[0]
-			&& game->player[1] == game->snd_player[1]
-			&& game->cnt_clt == game->amt_clt)
-			congratulate_user(game);
+			&& game->player[1] == game->snd_player[1])
+		{
+			if (game->cnt_clt == game->amt_clt)
+				congratulate_user(game);
+			else
+				mlx_put_image_to_window(game->mlx, game->window, game->img_tmp,
+						game->snd_player[1] * IMG_SIZE, game->snd_player[0] * IMG_SIZE);
+		}
 	}
 	if (keycode == 53)
 		return (close_window(game));
