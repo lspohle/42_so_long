@@ -23,7 +23,7 @@ Don't allow that anyone breaks your heart, and find your better half!*
 
 <a name="1"></a>
 # [Introduction to your role as a player](#1)
-Note that I included [MiniLibX](https://github.com/42Paris/minilibx-linux) as a graphics library, and I used my own [libft](https://github.com/lspohle/42_so_long/blob/main/libft) for [printf](https://github.com/lspohle/42_so_long/blob/main/libft/ft_printf.c), [memset](https://github.com/lspohle/42_so_long/blob/main/libft/ft_memset.c) and [strncmp](https://github.com/lspohle/42_so_long/blob/main/libft/ft_strncmp.c). The libft also contains the function [get_next_line](https://github.com/lspohle/42_so_long/blob/main/libft/get_next_line_bonus) to read from a file descriptor. 
+Note that I included [MiniLibX](https://github.com/42Paris/minilibx-linux) as a graphics library, and I used my own [libft](https://github.com/lspohle/42_so_long/blob/main/libft) for [printf](https://github.com/lspohle/42_so_long/blob/main/libft/ft_printf.c), [memset](https://github.com/lspohle/42_so_long/blob/main/libft/ft_memset.c) and [strncmp](https://github.com/lspohle/42_so_long/blob/main/libft/ft_strncmp.c). The libft also contains the function [get_next_line](https://github.com/lspohle/42_so_long/blob/main/libft/get_next_line_bonus.c) to read from a file descriptor. 
 
 |Character|Description|Image|Significance|
 |:--:|:--------:|:----:|:----:|
@@ -36,7 +36,7 @@ Note that I included [MiniLibX](https://github.com/42Paris/minilibx-linux) as a 
 
 <a name="2"></a>
 # [Play and fight all odds](#2)
-In the following the key codes for you as **the player** are defined:
+### In the following the key codes for you as **the player** are defined:
 |Key code|Description|Function|
 |:--:|:--------:|:--------:|
 |123|Left arrow|**Moves left**|
@@ -45,7 +45,7 @@ In the following the key codes for you as **the player** are defined:
 |126|Up arrow|**Moves up**|
 |53|Escape|**Closes the window and terminates the game**|
 
-In the following the key codes for you as **the loved one** are defined:
+### In the following the key codes for you as **the loved one** are defined:
 |Key code|Description|Function|
 |:--:|:--------:|:--------:|
 |0|A|**Moves left**|
@@ -57,6 +57,7 @@ In the following the key codes for you as **the loved one** are defined:
 <a name="3"></a>
 # [Requirements for the map](#3)
 - [x] It must be **rectangular**.
+- [x] It must be **rectangular**.
 - [x] It must be **surrounded by walls**.
 - [x] It must contain exactly **one exit**.
 - [x] It must contain exactly **one starting position**.
@@ -65,8 +66,8 @@ In the following the key codes for you as **the loved one** are defined:
 
 <a name="4"></a>
 # [Your benefits of So Long](#4)
-
--  **Install and implement easily**
+  
+-  **Installed and implemented easily**
 
      - [x] You can easily implement *A Little Valentine* as explained in [Installation](#3) and [Implementation](#4).
 -  **Customize the existing maps**
