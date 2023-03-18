@@ -26,7 +26,7 @@ I used the school's graphical library: the MiniLibX! This library was developed 
 
 <a name="1"></a>
 # [Introduction to your role as a player](#1)
-Note that I included [MiniLibX](https://github.com/42Paris/minilibx-linux) as a graphics library, and I used my own [libft](https://github.com/lspohle/42_so_long/blob/main/libft) for [printf](https://github.com/lspohle/42_so_long/blob/main/libft/ft_printf.c), [memset](https://github.com/lspohle/42_so_long/blob/main/libft/ft_memset.c) and [strncmp](https://github.com/lspohle/42_so_long/blob/main/libft/ft_strncmp.c). The libft also contains the function [get_next_line](https://github.com/lspohle/42_so_long/blob/main/libft/get_next_line_bonus.c) to read from a file descriptor. 
+Note that I used my own [libft](https://github.com/lspohle/42_so_long/blob/main/libft) for [printf](https://github.com/lspohle/42_so_long/blob/main/libft/ft_printf.c), [memset](https://github.com/lspohle/42_so_long/blob/main/libft/ft_memset.c) and [strncmp](https://github.com/lspohle/42_so_long/blob/main/libft/ft_strncmp.c). The libft also contains the function [get_next_line](https://github.com/lspohle/42_so_long/blob/main/libft/get_next_line_bonus.c) to read from a file descriptor. 
 
 |Character|Description|Image|Significance|
 |:--:|:--------:|:----:|:----:|
