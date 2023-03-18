@@ -24,7 +24,7 @@ t_bool	error(int errnum, char *descr)
 void	welcome_user(void)
 {
 	ft_printf(PURPLE"\n╔════════════════════════════════════╗\n");
-	ft_printf(PURPLE"║"ESC"        Your on your way! ⛄️        "PURPLE"║\n");
+	ft_printf(PURPLE"║"ESC"        Your on your way! ❤️        "PURPLE"║\n");
 	ft_printf(PURPLE"╚════════════════════════════════════╝\n\n"ESC);
 }
 
