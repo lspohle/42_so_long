@@ -19,7 +19,6 @@ Don't allow that anyone breaks your heart, and find your better half!*
 - [Installation](#5)
 - [Implementation](#6)
 - [Examples](#7)
-- [Deinstallation](#8)
 
 <a name="1.1"></a>
 # [Remark](#1.1)
