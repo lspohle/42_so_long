@@ -11,6 +11,7 @@ Don't allow that anyone breaks your heart, and find your better half!*
 
 <a name="0"></a>
 # [Table of content](#0)
+- [Remark](#1.1)
 - [Introduction to your role as a player](#1)
 - [Play and fight all odds](#2)
 - [Requirements for the maps](#3)
@@ -19,7 +20,10 @@ Don't allow that anyone breaks your heart, and find your better half!*
 - [Implementation](#6)
 - [Examples](#7)
 - [Deinstallation](#8)
-- [MiniLibX - License](#9)
+
+<a name="1"></a>
+# [Remark](#1.1)
+I used the school's graphical library: the MiniLibX! This library was developed internally and includes basic necessary tools to open a window, create images and deal with keyboard and mouse events. Due to legal regulations, the MiniLibX is not included in the current directory! Please keep in mind that you need to have access to the MiniLibx developed by 42 to play So Long. The bonus of the repository is not completely normed and may vary from the subject's instructions on intra.  
 
 <a name="1"></a>
 # [Introduction to your role as a player](#1)
@@ -69,37 +73,50 @@ Note that I included [MiniLibX](https://github.com/42Paris/minilibx-linux) as a 
   
 -  **Installed and implemented easily**
 
-     - [x] You can easily implement *A Little Valentine* as explained in [Installation](#3) and [Implementation](#4).
+     - [x] You can easily implement *So Long* as explained in [Installation](#3) and [Implementation](#4).
 -  **Customize the existing maps**
 
      - [x] You can easily customize the existing maps. The program will check whether your map is valid and meets the [requirements](#5).
 -  **Create your own map easily**
 
       - [x] You can easily modify the content of the directory [maps](https://github.com/lspohle/PRIVATE_a_little_valentine/tree/main/maps) and create your own map.
+-  **Create your own images easily**
+
+      - [x] You can easily modify the images of the directory [images](https://github.com/lspohle/PRIVATE_a_little_valentine/tree/main/images) and create your own storyline.
 -  **Adjust the colors or the content of the output in the shell**
 
       - [x] You may easily adjust the colors of the output in the shell/in the window by modifying the constants of the colors in [so_long.h](https://github.com/lspohle/42_so_long/blob/main/srcs/so_long.h) or [bonus_so_long.h](https://github.com/lspohle/42_so_long/blob/main/srcs/bonus_so_long.h). If you want to adjust the content of the output, immerse yourself in [display_output.c](https://github.com/lspohle/42_so_long/blob/main/srcs/display_output.c) or [bonus_display_output.c](https://github.com/lspohle/42_so_long/blob/main/srcs/bonus_display_output.c).
 -  **Works on all devices with macOS**
 
-      - [x] *A Little Valentine* works on the operating system macOS. You do not need to install anything. All necessary installations are either pre-installed on macOS or included in the repository of *So Long*.
+      - [x] *So Long* works on the operating system macOS. You do not need to install anything. All necessary installations are either pre-installed on macOS or included in the repository of *So Long*. Please keep in mind that you do need to download the MiniLibX from the project page on intra.
 
 <a name="5"></a>
 # [Installation](#5)
-- Install *So Long* by cloning the current repository, and creating an alias for your So Long. If you do not have an SSH key yet, you need to use the command using https. Otherwise, it is up to you to use either SSH or https.
+- Install *So Long* by cloning the current repository. If you do not have an SSH key yet, you need to use the command using https. Otherwise, it is up to you to use either SSH or https.
      - SSH
       
-      cd ~ && git clone git@github.com:lspohle/42_so_long.git && cd 42_so_long/srcs && bash script.sh
+      git clone git@github.com:lspohle/42_so_long.git
           
      - HTTPS
       
-      cd ~ && git clone https://github.com/lspohle/42_so_long.git && cd 42_so_long/srcs && bash script.sh
+      git clone https://github.com/lspohle/42_so_long.git
+      
+- Download the graphical library MiniLibX on intra from [the project page of So Long](https://projects.intra.42.fr/so_long/mine). Select a version of the MiniLibX that works for the operating system you're currently using. Add the downloaded MiniLibX to the repository `42_so_long`you cloned before. Please make sure that the directory in which the content of the MiniLibX is stored is called `minilibx`.
+      
+      minilibx
+- Go into the directory `srcs`and run the command `make`to compile.
+     
+      make
+- Play So Long by executing the program.
+    
+      ./so_long ../maps/[the_map_of_your_choice] [the_player_of_your_choice] [the_loved_one_of_your_choice]
       
 <a name="6"></a>
 # [Implementation](#6)
 - Ready to challenge youself? Find your love! 
-Run the following command whenever and wherever you wish to play *So Long* in the design of *A Little Valentine*. Select a different map by replacing `bonus_map1.ber` by the map of your choice. Take a look at the them in [maps](https://github.com/lspohle/42_so_long/tree/main/maps). Choose the character you identify most with - either woman, man or other. Last but not least: Choose a character that shall represent your loved one.
+Select a map of your choice. Take a look at the them in [maps](https://github.com/lspohle/42_so_long/tree/main/maps). Choose the character you identify most with - either woman, man or other. Last but not least: Choose a character that shall represent your loved one.
 
-       alv ../maps/bonus_map1.ber W M
+       ./so_long ../maps/[the_map_of_your_choice] [the_player_of_your_choice] [the_loved_one_of_your_choice]
 
 <a name="7"></a>
 # [Examples](#7)
@@ -107,42 +124,3 @@ Run the following command whenever and wherever you wish to play *So Long* in th
 https://user-images.githubusercontent.com/121381385/222758862-d51462eb-f52b-41c3-b117-ff9856bee753.mov
 
 https://user-images.githubusercontent.com/121381385/222758107-31ea796a-9955-430b-9f99-fc7f9fb6a129.mov
-
-<a name="8"></a>
-# [Deinstallation](#8)
-- Deinstall *So Long* from your device.
-      
-      cd ~ && rm -rf 42_so_long
-- Enter your ZSH configuration file, and remove the formerly created alias `alv` from your ZSH configuration file.
-
-      nano ~/.zshrc
-
-
-<a name="9"></a>
-# [MiniLibX - License](#9)
-
-BSD 2-Clause License
-
-Copyright (c) 2021, Ecole 42
-All rights reserved.
-
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
-
-1. Redistributions of source code must retain the above copyright notice, this
-   list of conditions and the following disclaimer.
-
-2. Redistributions in binary form must reproduce the above copyright notice,
-   this list of conditions and the following disclaimer in the documentation
-   and/or other materials provided with the distribution.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
