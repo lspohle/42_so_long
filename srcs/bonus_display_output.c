@@ -33,7 +33,7 @@ t_bool	error(int errnum, char *descr)
 	ft_printf(GREEN"%s"ESC"\nThose are the available maps:\n", select_map);
 	ft_printf(YELLOW"%s"ESC, available_maps),
 	ft_printf("The map has to be valid:\n"YELLOW"%s"ESC, rules_map);
-	ft_printf("\nAn example is: "GREEN"alv ../maps/bonus_map2.ber M W\n\n"ESC);
+	ft_printf("\nAn example is: "GREEN"./so_long ../maps/bonus_map1.ber M W\n\n"ESC);
 	return (false);
 }
 
