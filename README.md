@@ -21,7 +21,7 @@ Don't allow that anyone breaks your heart, and find your better half!*
 - [Examples](#7)
 - [Deinstallation](#8)
 
-<a name=".1"></a>
+<a name="1.1"></a>
 # [Remark](#1.1)
 I used the school's graphical library: the MiniLibX! This library was developed internally and includes basic necessary tools to open a window, create images and deal with keyboard and mouse events. Due to legal regulations, the MiniLibX is not included in the current directory! Please keep in mind that you need to have access to the MiniLibx developed by 42 to play So Long. The bonus of the repository is not completely normed and may vary from the subject's instructions on intra.  
 
