@@ -6,7 +6,7 @@
 /*   By: lspohle <lspohle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 11:22:39 by lspohle           #+#    #+#             */
-/*   Updated: 2023/03/18 19:32:02 by lspohle          ###   ########.fr       */
+/*   Updated: 2023/04/02 20:04:54 by lspohle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ t_bool	error(int errnum, char *descr)
 void	welcome_user(void)
 {
 	ft_printf(PURPLE"\n╔════════════════════════════════════╗\n");
-	ft_printf(PURPLE"║"ESC"        Your on your way! ❤️        "PURPLE"║\n");
+	ft_printf(PURPLE"║"ESC"        Your on your way! 🥰        "PURPLE"║\n");
 	ft_printf(PURPLE"╚════════════════════════════════════╝\n\n"ESC);
 }
 
